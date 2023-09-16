@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Gradient Background</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body id="gradient">
-	<h1>Amazing</h1> Generator</h1>
-	<input class="color1" type="color" name="color1" value="#00ff00">
-	<input class="color2" type="color" name="color2" value="#ff0000">
-	<h2>Escolha o seu Fundo</h2>
-	<h3></h3>
-	<script type="text/javascript" src="script.js"></script>
-</body>
+  <head>
+    <title>Gradient</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="gradient">
+    <div>
+      <input
+        class="color-first"
+        type="color"
+        name="colorFirst"
+        value="#c1c1c1"
+      />
+      <input
+        class="color-second"
+        type="color"
+        name="colorSecond"
+        value="#f1f1f1"
+      />
+    </div>
+
+    <div>
+      <input type="range" id="border" min="0" max="50" title="border radius" />
+    </div>
+
+    <h2>Crie um Elemento</h2>
+    <h3 class="value"></h3>
+    <div id="element"></div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>

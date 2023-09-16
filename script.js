@@ -1,34 +1,27 @@
-/* var body = document.getElementById("body"); 
-var colorOne = document.querySelector(".colorOne"); 
-var colorTwo = document.querySelector(".colorTwo"); 
-var css = document.getElementsByTagName('h3'); 
+let css = document.querySelector(".value");
 
-colorOne.addEventListener('input', function(){
-	body.style.background = 'linear-gradient(to right, ' + 
-	colorOne.value + ', ' + 
-	colorTwo.value + ');'; 
-}); 
-colorTwo.addeventListener('input', function(){
-	body.style.background = 'linear-gradient(to right, ' + 
-	colorOne.value + ', ' + 
-	colorTwo.value + ');'; 
-});  */
-var css = document.querySelector("h3");
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient");
+let colorFirst = document.querySelector(".color-first");
+let colorSecond = document.querySelector(".color-second");
 
-function setGradient() {
-	body.style.background = 
-	"linear-gradient(to right, " 
-	+ color1.value 
-	+ ", " 
-	+ color2.value 
-	+ ")";
+let element = document.querySelector("#element");
 
-	css.textContent = body.style.background + ";";
-}
+let border = document.querySelector("#border");
 
-color1.addEventListener("input", setGradient);
+const setGradient = () => {
+  element.style.background =
+    "linear-gradient(to right, " +
+    colorFirst.value +
+    ", " +
+    colorSecond.value +
+    ")";
 
-color2.addEventListener("input", setGradient);
+  css.textContent = body.style.background + ";";
+};
+
+colorFirst.addEventListener("input", setGradient);
+
+colorSecond.addEventListener("input", setGradient);
+
+border.addEventListener("change", function () {
+  element.style.borderRadius = `${border.value}px`;
+});
